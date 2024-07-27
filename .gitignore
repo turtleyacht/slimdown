@@ -9,6 +9,8 @@
 # files
 !.gitignore
 !.python-version
+!Dockerfile
+!Dockerfile.dockerignore
 !LICENSE
 !README
 !SPEC
