@@ -1,0 +1,74 @@
+
+        Slimdown, a specification
+
+The title is optional, but needs at least 4+4 (8) spaces. This enables longer
+titles, subtitles, and centered titles.
+
+This is a sentence preceding a command, which is
+
+    echo hi
+
+This is a sentence preceding a list of things (colon optional)
+
+  one
+
+  two
+
+  three
+
+Fundamentally, a list of items has spaces between for _decorated lists,_ like
+
+  item 1
+  And some more details, because it's nice to have.
+
+  item 2
+  Some more notes on this second entry.
+
+  item 3
+  Changes regarding something
+  And another line besides (80-char width, ideally).
+
+Sections are denoted by having a colon.
+
+This would (automatically) be considered a section heading:
+
+(Because it has a colon.)
+
+It's also considered a section because there's no (\n  ) after it.
+
+So, parsing slimdown based on the above
+
+  See if it's a command first (optional sentence\n\n + 4 spaces)
+
+  Then see if it's a list (2-space entries separated by newlines).
+
+  Section text has a colon
+
+  Section text does _not_ have a "dot word boundary" of "... a. Aaaa"
+                                                             ^^^^
+
+I guess sections have to go into a collection so that we can decorate duplicate
+strings as references...
+
+Section Test 1:
+
+  Oh and we have a list
+
+  So will it be parsed as a section or get confused?
+
+Section Test 2:
+
+    A command without a preceding sentence!
+
+It only generates one cube. Let's try another example:
+
+    The above should not be a section, because there is a "dot word boundary" of
+    of "... cube. Let's ..."
+
+Section Test 3: was a sentence like "Assumption: ..."
+
+Well, did you want it rendered as a section or a sentence? It's ambiguous, and
+in some cases we want it as a section and other times as a sentence. Let's warn
+about it in our linter (yes, I guess we need one now!).
+
+--------------------------------------------------------------------------------
