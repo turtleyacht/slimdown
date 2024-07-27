@@ -11,7 +11,10 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    container: python:2.7.18-slim
+    container:
+      image: python:2.7.18-slim
+      volumes:
+        - .:/app
     steps:
-      - run: python -m unittest discover
+      - run: ls && python -m unittest discover
 
