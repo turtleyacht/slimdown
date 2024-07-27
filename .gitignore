@@ -1,5 +1,13 @@
 /*
+
+# global
 !*.py
+
+# folders
 !.github/
+
+# files
 !.gitignore
 !.python-version
+!LICENSE
+!README
