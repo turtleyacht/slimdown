@@ -46,6 +46,8 @@ So, parsing slimdown based on the above
 
   Section text does _not_ have a "dot word boundary" of "... a. Aaaa"
                                                              ^^^^
+  Section text does not have a dot (i.e. sentences).
+  Sections are not sentences.
 
 I guess sections have to go into a collection so that we can decorate duplicate
 strings as references...
@@ -54,21 +56,23 @@ Section Test 1:
 
   Oh and we have a list
 
-  So will it be parsed as a section or get confused?
+  It should get parsed as a section, since "\n\n  " (two spaces).
 
 Section Test 2:
 
     A command without a preceding sentence!
+
+Same deal: "\n\n    " (four spaces).
 
 It only generates one cube. Let's try another example:
 
     The above should not be a section, because there is a "dot word boundary" of
     of "... cube. Let's ..."
 
-Section Test 3: was a sentence like "Assumption: ..."
+Assumption: but this will be a sentence, so it's not a section.
 
-Well, did you want it rendered as a section or a sentence? It's ambiguous, and
-in some cases we want it as a section and other times as a sentence. Let's warn
-about it in our linter (yes, I guess we need one now!).
+The above would be another section test. It should _not_ be a section.
+
+(I guess we don't need a linter yet, since there's no ambiguity now.)
 
 --------------------------------------------------------------------------------
