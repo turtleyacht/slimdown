@@ -1,24 +1,4 @@
 
-                                  README
-
-This repo uses
-
-  pyenv 2.4.8
-
-  python 2.7.18
-
-Switch to Python 2.7.18 with
-
-    pyenv local 2.7.18
-
-Execute (the one) test module with
-
-    python -m unittest not_unittest
-
-
-
---------------------------------------------------------------------------------
-
         Slimdown, a specification
 
 The title is optional, but needs at least 4+4 (8) spaces. This enables longer
