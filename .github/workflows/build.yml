@@ -10,6 +10,11 @@ jobs:
       - uses: psf/black@stable
 
   test:
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./app
+
     runs-on: ubuntu-latest
     container:
       image: python:2.7.18-slim
@@ -20,5 +25,5 @@ jobs:
         with:
           path: app
 
-      - run: pwd && cd app && ls && python -m unittest discover
+      - run: python -m unittest discover
 
