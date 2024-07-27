@@ -20,5 +20,5 @@ jobs:
         with:
           path: app
 
-      - run: pwd && cd /app && ls && python -m unittest discover
+      - run: pwd && cd app && ls && python -m unittest discover
 
