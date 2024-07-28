@@ -21,6 +21,13 @@ Execute tests with
 
     python -m unittest discover
 
+Execute individual test (modules) with
+
+    cd tests/
+    python -m unittest test_by_regex
+
+! That's _without_ the .py extension !
+
 Build Docker image with
 
     docker build --rm --force-rm -t slimdown .
@@ -38,11 +45,11 @@ Behavior of interpreter when used with -c:
 
 Behavior of interpreter `python' with simple_module.py:
 
-                                 sys.argv[0]       __name__      Note
-    python simple_module                                         1
-    python simple_module.py      simple_module.py  __main__      as script
-    python -m simple_module      /path/to/.py-file __main__      as module
-    python -m simple_module.py   -c                simple_module 2
+                               sys.argv[0]       __name__      Note
+    python simple_module                                       1
+    python simple_module.py    simple_module.py  __main__      as script
+    python -m simple_module    /path/to/.py-file __main__      as module
+    python -m simple_module.py -c                simple_module 2
 
 Results are the same, with or without `#!/usr/bin/env python' at the top.
 
