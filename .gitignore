@@ -1,10 +1,15 @@
 /*
 
-# global
+# global exclude
+# folders (packages) can have .pyc files that git will track without this
+**/*.pyc
+
+# top-level
 !*.py
 
 # folders
 !.github/
+!parser/
 !tests/
 
 # files
