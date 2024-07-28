@@ -18,8 +18,17 @@ class TestRegexStrategyMethods(unittest.TestCase):
     def test_is_paragraph(self):
         self.assertTrue(by_regex.is_paragraph("This is a paragraph block/sentence."))
 
+    def test_is_section(self):
+        self.assertTrue(by_regex.is_section("Chapter 1: The Whispering Hallow"))
+
     def test_is_title(self):
         self.assertTrue(by_regex.is_title("          README         "))
+
+    def test_section_is_not_paragraph(self):
+        self.assertTrue(not by_regex.is_paragraph("Chapter 1: The Whispering Hallow"))
+
+    def test_section_is_not_command(self):
+        self.assertTrue(not by_regex.is_command("Chapter 1: The Whispering Hallow"))
 
 
 if __name__ == "__main__":
