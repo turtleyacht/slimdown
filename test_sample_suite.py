@@ -21,4 +21,3 @@ class TestStringMethods(unittest.TestCase):
 
 suite = unittest.TestLoader().loadTestsFromTestCase(TestStringMethods)
 unittest.TextTestRunner(verbosity=2).run(suite)
-
