@@ -5,6 +5,7 @@
 
 # folders
 !.github/
+!tests/
 
 # files
 !.gitignore
@@ -14,3 +15,7 @@
 !LICENSE
 !README
 !SPEC
+
+# files (or folders) ...
+# !tests
+

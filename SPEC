@@ -75,4 +75,27 @@ The above would be another section test. It should _not_ be a section.
 
 (I guess we don't need a linter yet, since there's no ambiguity now.)
 
+Section Test 5: A section after a section
+
+This becomes another section:
+
+This too:
+
+For formatting, there is not sub-sections by default spec. One could modify the
+intermediate program to be sub-section aware, but it's implementation (content?)
+dependent. Hardcoded subsection names or a custom lookup thingy.
+
+Section Test 6: The next line should be a list, not a section
+
+  1: This is a list item, not a section. Easy enough (2 spaces).
+
+(Maybe we need comment lines to mark up our slimdown docs?)
+
+We need to handle `quoting' (along with _emphasis_ and **bold** or __emphatic__
+remarks).
+
+This is a paragraph. Just a running group of sentences.
+(Sentences shouldn't have to end in periods)
+Still part of a paragraph.
+
 --------------------------------------------------------------------------------

@@ -23,4 +23,29 @@ Run Docker container with
 
     docker run -it --rm slimdown /bin/sh
 
+Python Notes:
+
+Behavior of interpreter when used with -c:
+
+    python -c 'import sys; print(sys.argv[0] == "-c")'
+    # True
+
+Behavior of interpreter `python' with simple_module.py:
+
+                                 sys.argv[0]       __name__      Note
+    python simple_module                                         1
+    python simple_module.py      simple_module.py  __main__      as script
+    python -m simple_module      /path/to/.py-file __main__      as module
+    python -m simple_module.py   -c                simple_module 2
+
+Results are the same, with or without `#!/usr/bin/env python' at the top.
+
+The numbers in the above table are
+
+  1: No such file or directory
+  Exits early.
+
+  2: No module named simple_module.py
+  Exits at the end.
+
 --------------------------------------------------------------------------------
