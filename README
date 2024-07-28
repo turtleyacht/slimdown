@@ -1,6 +1,12 @@
 
                                   README
 
+Invoke the slimdown parser with
+
+    python wat_driver.py FILE
+
+The FILE should be the path to a file, like ./SPEC.
+
 This repo uses
 
   pyenv 2.4.8
