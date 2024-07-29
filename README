@@ -7,6 +7,12 @@ Invoke the slimdown parser with
 
 The FILE should be the path to a file, like ./SPEC.
 
+How it works:
+
+The parser delegates per-line processing to the handler. The handler
+is assigned one (or more?) strategies to use by the emitter, which
+generates the desired output.
+
 This repo uses
 
   pyenv 2.4.8
