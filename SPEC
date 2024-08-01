@@ -98,4 +98,33 @@ This is a paragraph. Just a running group of sentences.
 (Sentences shouldn't have to end in periods)
 Still part of a paragraph.
 
+Two list items with a command between are two list items. For example,
+
+  Here I'm sharing a list item of something, _as well as_ a command:
+
+    $ echo hello
+
+  Is this list item a new bullet or a continuation of the previous list item?
+  Well, it's irrelevant because it's a new list item.
+
+  That means people have to track their own numerals for numbered lists. I guess
+  don't make long numbered lists (to avoid renumbering). (Or defer to
+  post-processing after parsing.)
+
+
+We must distinguish between commands and lists when the next line of the list is
+indented underneath:
+
+  1. Here is a list item
+     and here is some text that continues, with 5 spaces preceding it
+
+  15. Here is a list item that has two numerals.
+      six spaces preceding this one.
+
+  100. Here is a list item that has three numerals.
+       seven spaces preceding this one.
+
+    Notice a command is four spaces still.
+
+So I guess we're okay here.
 --------------------------------------------------------------------------------
