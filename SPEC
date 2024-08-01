@@ -112,8 +112,8 @@ Two list items with a command between are two list items. For example,
   post-processing after parsing.)
 
 
-We must distinguish between commands and lists when the next line of the list is
-indented underneath:
+We don't need to distinguish between commands and lists when the next line of
+the list is indented underneath:
 
   1. Here is a list item
      and here is some text that continues, with 5 spaces preceding it
