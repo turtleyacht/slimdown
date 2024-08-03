@@ -9,13 +9,13 @@ import strategies.by_regex as by_regex
 def emit(line):
     if by_regex.is_command(line):
         print("<pre>\n" + line + "\n</pre>")
-    elsif by_regex.is_list(line):
+    elif by_regex.is_list(line):
         print("<li>" + line + </li>\n")
-    elsif by_regex.is_paragraph(line):
+    elif by_regex.is_paragraph(line):
         print("<p>\n" + line + "</p>\n")
-    elsif by_regex.is_section(line):
+    elif by_regex.is_section(line):
         print("<h2>" + line + "</h2>\n")
-    elsif by_regex.is_title(line):
+    elif by_regex.is_title(line):
         print("<h1>" + line + "</h1>\n")
     else:
         print("<!-- unparsed -->\n" + line + "<!-- end unparsed -->\n")
