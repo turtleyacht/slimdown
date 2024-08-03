@@ -6,7 +6,9 @@ sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/../../emitters")
 import echo_emitter as emitter
 
 
-def on_line(line, line_count, processed_line_count):
+def on_line(line, info):
+    line_count = info["line_count"]
+    processed_line_count = info["processed_line_count"]
     print(
         __name__
         + "("
