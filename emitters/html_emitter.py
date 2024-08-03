@@ -10,7 +10,7 @@ def emit(line):
     if by_regex.is_command(line):
         print("<pre>\n" + line + "\n</pre>")
     elif by_regex.is_list(line):
-        print("<li>" + line + </li>\n")
+        print("<li>" + line + "</li>\n")
     elif by_regex.is_paragraph(line):
         print("<p>\n" + line + "</p>\n")
     elif by_regex.is_section(line):
