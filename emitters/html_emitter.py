@@ -5,6 +5,7 @@ sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/../parser")
 
 import strategies.by_regex as by_regex
 
+
 def emit(line):
     if by_regex.is_command(line):
         print("<pre>\n" + line + "\n</pre>")

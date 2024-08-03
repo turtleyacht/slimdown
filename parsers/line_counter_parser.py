@@ -1,5 +1,6 @@
 import sys
 
+
 # Handlers must have an `on_line' function that handles
 # the line "event" after it is read from the file.
 def open_and_read(file, handler):

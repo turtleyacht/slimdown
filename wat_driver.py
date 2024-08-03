@@ -14,7 +14,9 @@ Usage: python wat_driver.py FILE\
         )
     else:
         file = sys.argv[1]
-        parsers.last_line_parser.open_and_read(file, parser.handlers.sanity_array_handler)
+        parsers.last_line_parser.open_and_read(
+            file, parser.handlers.sanity_array_handler
+        )
 else:
     print("I was invoked as a module. What do I do?")
     exit(1)
