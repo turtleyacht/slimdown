@@ -9,4 +9,5 @@ import html_emitter as emitter
 def on_line(line, info):
     line_count = info["line_count"]
     processed_line_count = info["processed_line_count"]
-    emitter.emit(line)
+    emitter.emit(line, info)
+    info["previous_line"] = line

@@ -6,6 +6,7 @@ import sys
 def open_and_read(file, handler):
     info = {}
     info["line_count"] = 0
+    info["previous_line"] = None
     info["processed_line_count"] = 0
     with open(file, "r") as fp:
         for line in fp:
